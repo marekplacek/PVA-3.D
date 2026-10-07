@@ -16,7 +16,7 @@ body {
   padding-top: 70px;
 }
 
-/* Horní navigace */
+/* Navigace */
 .navbar {
   position: fixed;
   top: 0;
@@ -47,6 +47,9 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transition: color 0.2s;
 }
 
@@ -54,7 +57,7 @@ body {
   color: #4caf50;
 }
 
-/* Container & Layout */
+/* Layout */
 .container {
   max-width: 1100px;
   margin: 20px auto;
@@ -117,44 +120,46 @@ body {
   border-bottom: 1px solid #333;
 }
 
-.online-features, .more-info-box ul {
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.more-info-box {
-  background-color: #262626;
-  padding: 15px;
-  border-left: 4px solid #f39c12;
-  border-radius: 4px;
-  margin-top: 15px;
-}
-
-.more-info-box a {
-  color: #f39c12;
-  text-decoration: none;
-}
-
+/* Zápatí & Validace */
 footer {
   text-align: center;
   padding: 25px;
   border-top: 1px solid #333;
   color: #888;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
 }
 
-/* Mobilní responzivita */
+.validator-links a {
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 0 5px;
+}
+
+.validator-links a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONZIVITA (Media Queries) */
 @media (max-width: 768px) {
+  /* Změna layoutu na 1 sloupec */
   .layout-grid {
     flex-direction: column;
   }
   
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+  /* Skrytí textů v menu na mobilu – zůstanou jen ikonky */
+  .menu-text {
+    display: none;
   }
-  
-  body {
-    padding-top: 110px;
+
+  .navbar ul {
+    gap: 25px;
+  }
+
+  .navbar a {
+    font-size: 1.3rem; /* Zvětšení ikonek na mobilu */
   }
 }
