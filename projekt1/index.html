@@ -1,44 +1,102 @@
-<section id="uvod" class="container">
-  <div class="main-content">
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA V & Online Fanpage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Horní navigace / Banner -->
+  <header class="navbar">
+    <div class="logo">GTA V</div>
+    <nav>
+      <ul>
+        <li><a href="#uvod"><i class="fa-solid fa-house"></i> Úvod</a></li>
+        <li><a href="#postavy"><i class="fa-solid fa-users"></i> Postavy</a></li>
+        <li><a href="#gta-online"><i class="fa-solid fa-gamepad"></i> GTA Online</a></li>
+        <li><a href="#kontakt"><i class="fa-solid fa-envelope"></i> Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
     
-    <!-- O čem hra je -->
-    <article class="card story-card">
-      <h2>O čem hra je?</h2>
+    <!-- Sekce: Úvod a Rychlá fakta -->
+    <section id="uvod" class="layout-grid">
+      <div class="main-content">
+        <article class="card">
+          <h2>O čem hra je?</h2>
+          <p>
+            <strong>Grand Theft Auto V</strong> je akční hra v otevřeném světě odehrávající se ve fiktivním státě San Andreas. Příběh sleduje osudy tří odlišných zločinců, kteří spojí síly při sérii nebezpečných bankovních loupeží a akcí pod tlakem vládních agentur a podsvětí.
+          </p>
+        </article>
+
+        <!-- Sekce: Postavy -->
+        <article id="postavy" class="card">
+          <h2>Hlavní Hrdinové</h2>
+
+          <div class="hero-box">
+            <h3><i class="fa-solid fa-user-tie"></i> Michael De Santa</h3>
+            <p>Bývalý bankovní lupič, který žije v luxusní vile v Rockford Hills v programu na ochranu svědků.</p>
+          </div>
+
+          <div class="hero-box">
+            <h3><i class="fa-solid fa-car"></i> Franklin Clinton</h3>
+            <p>Mladý pouliční zabavovač aut z South Los Santos, který touží po velkých penězích a lepším životě.</p>
+          </div>
+
+          <div class="hero-box">
+            <h3><i class="fa-solid fa-plane"></i> Trevor Philips</h3>
+            <p>Nezpytatelný a sociopatický bývalý vojenský pilot žijící v pouštním Sandy Shores.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Postranní panel -->
+      <aside class="sidebar card">
+        <h3><i class="fa-solid fa-circle-info"></i> Rychlá fakta</h3>
+        <ul>
+          <li><strong>Vývojář:</strong> Rockstar North</li>
+          <li><strong>Vydavatel:</strong> Rockstar Games</li>
+          <li><strong>Město:</strong> Los Santos</li>
+          <li><strong>Režimy:</strong> Singleplayer &amp; Online</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Sekce: GTA Online -->
+    <section id="gta-online" class="card">
+      <h2>Co je to GTA Online?</h2>
       <p>
-        <strong>Grand Theft Auto V</strong> je akční hra v otevřeném světě, která se odehrává ve fiktivním státě San Andreas. Příběh sleduje osudy tří odlišných zločinců, kteří spojí síly při sérii nebezpečných bankovních loupeží a akcí, zatímco se snaží přežít pod tlakem vládních agentur a podsvětí.
+        Dynamický multiplayerový svět pro až 30 hráčů. Vytvoř si vlastní postavu, stoupej po žebříčku podsvětí a buduj své zločinecké impérium.
       </p>
-    </article>
 
-    <!-- Hlavní Hrdinové -->
-    <article class="card">
-      <h2>Hlavní Hrdinové</h2>
+      <h3>Co všechno můžeš dělat?</h3>
+      <ul class="online-features">
+        <li><strong>Plnit Heisty:</strong> Plánovat velké akce (Cayo Perico, Diamond Casino).</li>
+        <li><strong>Budovat Byznys:</strong> Vlastnit firmy, motorkářské kluby, bunkry a noční kluby.</li>
+        <li><strong>Závodit a Sbírat aut:</strong> Nakupovat supersporty a upravovat je v Los Santos Customs.</li>
+      </ul>
 
-      <div class="hero-box">
-        <h3><i class="fa-solid fa-user-tie"></i> Michael De Santa</h3>
-        <p>Bývalý bankovní lupič, který žije v luxusní vile v Rockford Hills v programu na ochranu svědků.</p>
+      <div class="more-info-box">
+        <h3>Kde se dozvědět více?</h3>
+        <ul>
+          <li><a href="https://www.rockstargames.com/gta-online" target="_blank" rel="noopener">Oficiální stránky Rockstar Games</a></li>
+          <li><a href="https://gta.fandom.com/wiki/Grand_Theft_Auto_Online" target="_blank" rel="noopener">GTA Wiki (Fandom)</a></li>
+          <li><a href="https://www.reddit.com/r/gtaonline/" target="_blank" rel="noopener">r/gtaonline na Redditu</a></li>
+        </ul>
       </div>
+    </section>
 
-      <div class="hero-box">
-        <h3><i class="fa-solid fa-car"></i> Franklin Clinton</h3>
-        <p>Mladý pouliční zabavovač aut z South Los Santos, který touží po velkých penězích a lepším životě.</p>
-      </div>
+  </main>
 
-      <div class="hero-box">
-        <h3><i class="fa-solid fa-plane"></i> Trevor Philips</h3>
-        <p>Nezpytatelný a sociopatický bývalý vojenský pilot žijící v pouštním Sandy Shores.</p>
-      </div>
-    </article>
+  <!-- Sekce: Kontakt -->
+  <footer id="kontakt">
+    <p>&copy; 2026 GTA V Fanpage. Vytvořeno pro školní projekt.</p>
+  </footer>
 
-  </div>
-
-  <!-- Postranní panel Rychlá fakta -->
-  <aside class="sidebar card">
-    <h3><i class="fa-solid fa-circle-info"></i> Rychlá fakta</h3>
-    <ul>
-      <li><strong>Vývojář:</strong> Rockstar North</li>
-      <li><strong>Vydavatel:</strong> Rockstar Games</li>
-      <li><strong>Město:</strong> Los Santos</li>
-      <li><strong>Režimy:</strong> Singleplayer &amp; Online</li>
-    </ul>
-  </aside>
-</section>
+</body>
+</html>
