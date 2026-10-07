@@ -13,10 +13,10 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   line-height: 1.6;
-  padding-top: 70px;
+  padding-top: 80px;
 }
 
-/* Navigace */
+/* Horní navigace / Bannery */
 .navbar {
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ body {
 }
 
 .navbar .logo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #4caf50;
 }
@@ -46,120 +46,130 @@ body {
 .navbar a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: color 0.2s;
+  padding: 8px 12px;
+  background-color: #262626;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .navbar a:hover {
-  color: #4caf50;
+  background-color: #4caf50;
+  color: #000;
 }
 
-/* Layout */
+/* Hlavní obsah a sekce */
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
 }
 
-.layout-grid {
-  display: flex;
-  gap: 20px;
-}
-
-.main-content {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.sidebar {
-  flex: 1;
-  height: fit-content;
-}
-
-/* Karty */
 .card {
   background-color: #1e1e1e;
   border-radius: 8px;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  scroll-margin-top: 90px; /* Odsazení kvuli pevné liště */
 }
 
 .card h2 {
   color: #4caf50;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
 }
 
+.card h3 {
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Postavy */
 .hero-box {
   border-left: 4px solid #4caf50;
   background-color: #262626;
-  padding: 12px;
-  margin-top: 12px;
+  padding: 15px;
+  margin-top: 15px;
   border-radius: 0 6px 6px 0;
 }
 
-.hero-box h3 {
-  color: #fff;
-  margin-bottom: 5px;
+/* Seznamy */
+.custom-list {
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.custom-list li {
+  margin-bottom: 8px;
 }
 
-.sidebar li {
-  padding: 8px 0;
-  border-bottom: 1px solid #333;
-}
-
-/* Zápatí & Validace */
+/* Kontakt & Footer */
 footer {
+  background-color: #1a1a1a;
   text-align: center;
-  padding: 25px;
-  border-top: 1px solid #333;
-  color: #888;
+  padding: 30px 20px;
+  border-top: 2px solid #333;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 40px;
+  align-items: center;
+  gap: 12px;
+  scroll-margin-top: 90px;
 }
 
-.validator-links a {
+footer h2 {
   color: #4caf50;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin: 0 5px;
 }
 
-.validator-links a:hover {
+.contact-email {
+  color: #4caf50;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-email:hover {
   text-decoration: underline;
 }
 
-/* RESPONZIVITA (Media Queries) */
+.validator-links {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.validator-links a {
+  color: #888;
+  text-decoration: none;
+}
+
+.validator-links a:hover {
+  color: #fff;
+}
+
+/* Mobilní responzivita */
 @media (max-width: 768px) {
-  /* Změna layoutu na 1 sloupec */
-  .layout-grid {
-    flex-direction: column;
-  }
-  
-  /* Skrytí textů v menu na mobilu – zůstanou jen ikonky */
   .menu-text {
-    display: none;
+    display: none; /* Schová texty v menu, nechá jen ikony */
   }
 
   .navbar ul {
-    gap: 25px;
+    gap: 15px;
   }
 
   .navbar a {
-    font-size: 1.3rem; /* Zvětšení ikonek na mobilu */
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  body {
+    padding-top: 70px;
   }
 }
